@@ -5,24 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Aziende"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        ResizeMode="NoResize"
+        Title="MainWindow" Height="800" Width="800">
     <Grid>
+        
+        <!-- Definizione Tabella -->
         <Grid.RowDefinitions>
-            <RowDefinition Height="0.5*"></RowDefinition>
-            <RowDefinition Height="6.5*"></RowDefinition>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="6.5*"/>
         </Grid.RowDefinitions>
+        
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.5*"></ColumnDefinition>
-            <ColumnDefinition Width="5*"></ColumnDefinition>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="5*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" TextAlignment="Center">Gestione File Xml</TextBlock>
+        
+        <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" TextAlignment="Center" FontFamily="Times New Roman" FontSize="13">Gestione File Xml</TextBlock>
+        
+        <!-- Pannelo per input -->
         <StackPanel HorizontalAlignment="Center" Grid.Row="0" Orientation="Horizontal" Grid.Column="1">
-            <Label>Inserire Nome File:</Label>
-            <TextBox Name="tbxName" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" AcceptsReturn="True" Width="200" Margin="20, 0"></TextBox>
-            <Button Width="96" Height="25" Click="Button_Click">Carica</Button>
+            <Label FontFamily="times new roman" FontSize="18">Inserire Nome File:</Label>
+            <TextBox Name="tbxName" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" AcceptsReturn="True" Width="200" Margin="4" BorderThickness="2"></TextBox>
+            <Button Margin="3" FontFamily="times new roman" FontSize="18" Click="Button_Click">Carica</Button>
         </StackPanel>
-        <TextBlock  Grid.Column="1"   Name="trvAziende" Grid.Row="1" TextWrapping="Wrap" > 
-            
-        </TextBlock>
+        <TextBlock Name="trvAziende" Grid.Column="1" Grid.Row="1" TextWrapping="Wrap"></TextBlock>
     </Grid>
 </Window>

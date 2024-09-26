@@ -19,20 +19,21 @@ namespace Aziende.Models
             FileName = name;
             //XmlDocument = new XmlDocument();
         }
+        public FileInteraction()
+        {
+            //XmlDocument = new XmlDocument();
+        }
 
         public void Load()
         {
             StreamReader streamReader = new StreamReader($"{FileName}.xml");
             Content = streamReader.ReadToEnd();
-        }  
+        }
+
         public void Load(string name)
         {
             FileName = name;
             Load();
-        }
-
-
-
-        
+        }        
     }
 }
